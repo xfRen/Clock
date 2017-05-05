@@ -10,9 +10,12 @@ var Buttonbar = React.createClass({
   render: function() {
     return (
       <div className='buttonBar'>
-        <button id='startBtn' className='hollow button large' onClick={this.onStartClickHandler}>Start</button>
-        <button id='pauseBtn' className='hollow button large' onClick={this.onPauseClickHandler}>Pause</button>
-        <button id='resetBtn' className='hollow button secondary large' onClick={this.onResetClickHandler}>Reset</button>
+        <button id='startBtn' className='hollow button large'
+          onClick={this.onStartClickHandler}>Start</button>
+        <button id='pauseBtn' className='hollow button large'
+          onClick={this.onPauseClickHandler}>Pause</button>
+        <button id='resetBtn' className='hollow button secondary large'
+          onClick={this.onResetClickHandler}>Reset</button>
       </div>
     );
   },
@@ -32,19 +35,30 @@ var Buttonbar = React.createClass({
       $('#startBtn').removeClass('disabled');
     }
   },
-  onStartClickHandler: function() {
-    this.toggleButton();
-    $('#resetBtn').addClass('disabled');
-    this.props.onStart();
+  onStartClickHandler: function(event) {
+    if (event !== null && event.target !== null &&
+        event.target.className.indexOf('disabled') === -1) {
+      // disabled class can not make the button looks like disabled,
+      // but it can still be clicked and clickHandler is fired.
+      this.toggleButton();
+      $('#resetBtn').addClass('disabled');
+      this.props.onStart();
+    }
   },
-  onPauseClickHandler: function() {
-    this.toggleButton();
-    $('#resetBtn').removeClass('disabled');
-    this.props.onPause();
+  onPauseClickHandler: function(event) {
+    if (event !== null && event.target !== null &&
+        event.target.className.indexOf('disabled') === -1) {
+      this.toggleButton();
+      $('#resetBtn').removeClass('disabled');
+      this.props.onPause();
+    }
   },
-  onResetClickHandler: function() {
-    $('#resetBtn').addClass('disabled');
-    this.props.onReset();
+  onResetClickHandler: function(event) {
+    if (event !== null && event.target !== null &&
+        event.target.className.indexOf('disabled') === -1) {
+      $('#resetBtn').addClass('disabled');
+      this.props.onReset();
+    }
   },
   toggleButton: function() {
     $('#startBtn').toggleClass('hide');
