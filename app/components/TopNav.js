@@ -10,17 +10,15 @@ var TopNav = React.createClass({
           <div className='title-bar-title'>Menu</div>
         </div>
         <div className='top-bar' id='topBar'>
-          <div>
-            <div className='top-bar-left'>
-              <ul className='menu'>
-                <li>
-                  <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Stopwatch</IndexLink>
-                </li>
-                <li>
-                  <Link to='/timer' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Timer</Link>
-                </li>
-              </ul>
-            </div>
+          <div className='top-bar-left'>
+            <ul className='menu'>
+              <li>
+                <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Stopwatch</IndexLink>
+              </li>
+              <li>
+                <Link to='/timer' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Timer</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
