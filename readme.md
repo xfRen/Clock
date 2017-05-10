@@ -7,7 +7,7 @@
 <h2>Development</h2>
 <table>
   <tr align="center">
-    <th colspan=8><h4>Built with</h4></th>
+    <th colspan=7><h4>Built with</h4></th>
     <th><h4>See it in action</h4></th>
   </tr>
   <tr align="center">
