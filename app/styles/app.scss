@@ -3,3 +3,7 @@
 @import 'components/topNav';
 @import 'components/buttonbar';
 @import 'components/clock';
+
+body {
+  background-color: $page-background;
+}

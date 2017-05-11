@@ -8,7 +8,7 @@
 <table>
   <tr align="center">
     <th colspan=7><h4>Built with</h4></th>
-    <th><h4>See it in action</h4></th>
+    <th><h4>Click to visit</h4></th>
   </tr>
   <tr align="center">
     <td><a href="https://facebook.github.io/react/" target="_blank"><img src="logo/react-logo.png" height="60px" /></a></td>
