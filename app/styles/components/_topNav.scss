@@ -1,0 +1,22 @@
+.top-bar {
+  background-color: $nav-background;
+  ul {
+    background-color: $nav-background;
+  }
+  .active-link {
+    font-weight: bold;
+    color: $link-active-color;
+  }
+}
+
+li {
+  a {
+    color: $link-default-color;
+  }
+  a:hover {
+    color: $link-hover-color;
+  }
+  a:focus {
+    color: $link-focus-color;
+  }
+}

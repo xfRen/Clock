@@ -1,22 +1,5 @@
-.pageContent {
-  margin-top: 3rem;
-}
-
-.buttonBar {
-  text-align: center;
-}
-
-.button {
-  margin: 20px;
-  width: 120px;
-}
-
-.timeP {
-  font-size: 6.5rem;
-  text-align: center;
-}
-
-.statusP {
-  font-size: 1.3rem;
-  text-align: center;
-}
+@import 'base/variables';
+@import 'components/main';
+@import 'components/topNav';
+@import 'components/buttonbar';
+@import 'components/clock';

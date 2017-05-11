@@ -9,10 +9,10 @@ var Clock = React.createClass({
     return (
       <div>
         <div>
-          <p className='timeP'>{this.props.time}</p>
+          <p className='time-paragraph'>{this.props.time}</p>
         </div>
         <div>
-          <p className='statusP'>{this.props.status}</p>
+          <p className='status-paragraph'>{this.props.status}</p>
         </div>
       </div>
     );

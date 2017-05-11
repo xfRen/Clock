@@ -37,6 +37,11 @@ var Stopwatch = React.createClass({
       </div>
     );
   },
+  componentWillUnmount: function() {
+    var {intervalId} = this.state;
+    clearInterval(intervalId);
+    this.resetClickHandler();
+  },
   startClickHandler: function() {
     var intervalId = setInterval(this.runClock, 1000);
     this.setState({

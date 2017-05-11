@@ -42,6 +42,11 @@ var Timer = React.createClass({
       </div>
     );
   },
+  componentWillUnmount: function() {
+    var {intervalId} = this.state;
+    clearInterval(intervalId);
+    this.resetClickHandler();
+  },
   startClickHandler: function() {
     var intervalId = setInterval(this.countDown, 1000);
     this.setState({
@@ -93,7 +98,13 @@ var Timer = React.createClass({
     var {minute, second} = this.state;
     if (second === 0) {
       if (minute === 0) {
-        // 00:00
+        // 00:00, reset everything
+        var {intervalId} = this.state;
+        clearInterval(intervalId);
+        this.resetClickHandler();
+        this.setState({
+          startBtnDisabled: true
+        });
       } else {
         minute -= 1;
         second = 59;

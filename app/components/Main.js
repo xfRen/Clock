@@ -5,7 +5,7 @@ var Main = (props) => {
   return (
     <div>
       <TopNav/>
-      <div className='row pageContent'>
+      <div className='row page-content'>
         <div className='small-12 medium-6 small-centered columns'>
           {props.children}
         </div>

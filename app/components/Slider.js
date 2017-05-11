@@ -1,4 +1,5 @@
 const React = require('react');
+const ReactDOM = require('react-dom');
 
 var Slider = React.createClass({
   propTypes: {
@@ -18,7 +19,7 @@ var Slider = React.createClass({
     );
   },
   componentDidMount: function() {
-    $(this.getDOMNode()).foundation();
+    $(ReactDOM.findDOMNode(this)).foundation();
     var sliderInstance = this;
     $('.slider').on('moved.zf.slider', function() {
       var value = $(this).children('.slider-handle').attr('aria-valuenow');

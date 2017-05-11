@@ -9,7 +9,7 @@ var Buttonbar = React.createClass({
   },
   render: function() {
     return (
-      <div className='buttonBar'>
+      <div className='button-bar'>
         <button id='startBtn' className='hollow button large'
           onClick={this.onStartClickHandler}>Start</button>
         <button id='pauseBtn' className='hollow button large'
@@ -31,6 +31,8 @@ var Buttonbar = React.createClass({
     var {startBtnDisabled} = newProps;
     if (startBtnDisabled) {
       $('#startBtn').addClass('disabled');
+      $('#pauseBtn').addClass('hide');
+      $('#startBtn').removeClass('hide');
     } else {
       $('#startBtn').removeClass('disabled');
     }

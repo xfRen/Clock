@@ -1,4 +1,5 @@
 const React = require('react');
+const ReactDOM = require('react-dom');
 const {Link, IndexLink} = require('react-router');
 
 var TopNav = React.createClass({
@@ -13,10 +14,10 @@ var TopNav = React.createClass({
           <div className='top-bar-left'>
             <ul className='menu'>
               <li>
-                <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Stopwatch</IndexLink>
+                <IndexLink to='/' activeClassName='active-link'>Stopwatch</IndexLink>
               </li>
               <li>
-                <Link to='/timer' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Timer</Link>
+                <Link to='/timer' activeClassName='active-link'>Timer</Link>
               </li>
             </ul>
           </div>
@@ -25,7 +26,7 @@ var TopNav = React.createClass({
     );
   },
   componentDidMount: function() {
-    $(this.getDOMNode()).foundation();
+    $(ReactDOM.findDOMNode(this)).foundation();
   }
 });
 
